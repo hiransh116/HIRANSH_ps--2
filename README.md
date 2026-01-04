@@ -1,1 +1,6 @@
-# HIRANSH_ps--2
+In this project, I analyzed NIFTY 50 index data to predict whether the market will increase or decrease on the next trading day. For this purpose, I used 10 years of historical daily data collected from Yahoo Finance using the yfinance library.
+First, I created a target variable that checks whether the closing price on the next day is higher than the current day. This converts the problem into a binary classification task (market up or down).
+Next, I performed feature engineering to extract meaningful information from price data. These features include daily returns, intraday price range, open–close difference, and short-term moving averages. These features help capture market momentum, volatility, and trend behavior.
+After cleaning the data and removing missing values, the dataset was split into training (60%) and testing (40%) sets while preserving time order. A machine learning pipeline was created using StandardScaler for feature scaling and Logistic Regression for classification.
+The model was trained on historical data and then evaluated using accuracy score on unseen test data. Finally, the trained model was used to predict the next day market direction based on the most recent available data.
+my accuracy is 53%
